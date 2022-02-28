@@ -1,0 +1,10 @@
+
+d
+java:S2094"BRemove this empty class, write its code or make it an "interface".(Â˜Š×ûÿÿÿÿ8§ä×¸ò/
+o
+java:S4276
+"RRefactor this code to use the more specialised Functional Interface 'IntPredicate'(·ô‘‘8ªä×¸ò/
+O
+java:S1611
+"2Remove the parentheses around the "even" parameter(·ô‘‘8ªä×¸ò/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(•˜Û¯8¬ä×¸ò/
