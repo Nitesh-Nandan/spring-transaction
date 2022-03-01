@@ -25,8 +25,9 @@ public class RedisTemplateDemoConfig {
 @Slf4j
 class JedisPoolDemo2 {
 
-    private String host = "127.0.0.1";
-    private Integer port = 13175;
+    private final String host = "127.0.0.1";
+    private final Integer port = 13175;
+    private final String password = "";
 
     public JedisPoolConfig getJedisPoolConfig() {
         JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
@@ -46,6 +47,7 @@ class JedisPoolDemo2 {
         configuration.setHostName(host);
         configuration.setPort(port);
         configuration.setDatabase(0);
+        configuration.setPassword(password);
 
         JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory(configuration);
         jedisConnectionFactory.setPoolConfig(getJedisPoolConfig());
@@ -79,7 +81,7 @@ class RedisTemplateController {
 
         String key = RandomStringUtils.randomAlphabetic(8);
         String val = RandomStringUtils.randomAlphabetic(5);
-        redisTemplate.opsForValue().set("Redis:"+key, val);
+        redisTemplate.opsForValue().set("Redis:" + key, val);
         return ResponseEntity.ok("Created");
     }
 }
